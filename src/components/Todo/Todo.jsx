@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import './Main.scss';
+import './Todo.scss';
 import { useContext } from 'react';
-import { UserContext } from '../substrate-lib/SubstrateContext';
+import { UserContext } from '../../substrate-lib/TodoContext';
 
-function Main() {
+function Todo() {
   const { todos, handleSubmit, name, setname, dispatch } =
     useContext(UserContext);
   // const randomAccount = '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY';
@@ -45,4 +45,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Todo;
