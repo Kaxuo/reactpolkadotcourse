@@ -1,20 +1,51 @@
 .accounts {
-  background-color: lightgrey;
   display: flex;
   padding: 10px;
   flex-wrap: wrap;
   justify-content: space-between;
   & > span {
     display: flex;
-    justify-content: center;
   }
   .name {
     width: 10vw;
+    justify-content: start;
   }
   .address {
     width: 40vw;
+    justify-content: center;
   }
   .balance {
     width: 10vw;
+    justify-content: center;
+  }
+}
+
+.small {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .big {
+    display: none !important;
+  }
+  .small {
+    display: block !important;
+  }
+}
+
+.form {
+  height: 8em;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin: 0em 10em;
+  padding: 3em;
+  flex-direction: column;
+  .input {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 60%;
+    }
   }
 }
