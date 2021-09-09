@@ -1,0 +1,16 @@
+.form {
+  height: 5em;
+  border: 1px solid royalblue;
+  display: flex;
+  justify-content: space-between;
+  margin: 0em 10em;
+  padding: 3em;
+  flex-direction: column;
+  .input {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 60%;
+    }
+  }
+}
