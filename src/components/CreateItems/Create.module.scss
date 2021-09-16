@@ -1,16 +1,48 @@
 .form {
-  height: 5em;
-  border: 1px solid blueviolet;
+  padding-left: 20px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
-  margin: 0em 10em;
-  padding: 3em;
+  width: 200px;
+  margin-top: 2em;
   flex-direction: column;
-  .input {
-    display: flex;
-    justify-content: space-between;
-    input {
-      width: 60%;
-    }
+  .textField {
+    padding: 0px;
+  }
+  @media screen and (max-width: 1270px) {
+    margin-top: 0px;
+    margin-bottom: 4em;
+  }
+}
+
+.object {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.button {
+  margin-top: 70px;
+  text-align: center;
+  .but {
+    width: 150px;
+  }
+  @media screen and (max-width: 1270px) {
+    margin-top: 15px;
+  }
+}
+.unit {
+  display: flex;
+  justify-content: center;
+  .un {
+    margin-top: 15px;
+    text-align: center;
+    padding: 0.5833em 0.833em;
+    min-width: 180px;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    color: #00b5ad;
+    border-color: #00b5ad;
+    border-radius: 0.28571429rem;
   }
 }

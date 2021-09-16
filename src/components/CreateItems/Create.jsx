@@ -1,6 +1,8 @@
 import { SubstrateContext } from './../../substrate-lib/BlockChainContext';
 import styles from './Create.module.scss';
 import { useContext, useState } from 'react';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 function Create() {
   const { create } = useContext(SubstrateContext);
@@ -11,11 +13,33 @@ function Create() {
   return (
     <div>
       <div className={styles.form}>
-        <div className={styles.input}>
-          <span>ObjectID</span>
-          <input type='text' name='id' value={id} onChange={onChange} />
+        <p className={styles.object}>Create Class</p>
+        <div className={styles.unit}>
+          <p className={styles.un}>Class Id = id</p>
         </div>
-        <button onClick={() => create(id)}>Submit</button>
+        <div className={styles.input}>
+          <TextField
+            className={styles.textField}
+            id='outlined-basic'
+            label='Object ID'
+            variant='outlined'
+            name='id'
+            size='small'
+            value={id}
+            onChange={onChange}
+            type='number'
+          />
+        </div>
+        <div className={styles.button}>
+          <Button
+            className={styles.but}
+            variant='contained'
+            color='primary'
+            onClick={() => create(id)}
+          >
+            Create Class
+          </Button>
+        </div>
       </div>
     </div>
   );

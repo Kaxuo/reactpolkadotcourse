@@ -5,6 +5,7 @@ import Main from './components/Main/Main';
 import Transfer from './components/Tranfer/Transfer';
 import Create from './components/CreateItems/Create';
 import Assets from './components/Assets/Assets';
+import Status from './components/Status/Status';
 
 function App() {
   return (
@@ -12,9 +13,12 @@ function App() {
       <ContextProvider>
         <div className='App'>
           <Main />
-          <Transfer />
-          <Create />
-          <Assets />
+          <div className='forms'>
+            <Create />
+            <Assets />
+            <Transfer />
+          </div>
+          <Status />
         </div>
       </ContextProvider>
     </SubstrateProvider>

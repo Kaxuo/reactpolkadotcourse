@@ -1,16 +1,53 @@
 .form {
-  height: 8em;
-  border: 1px solid black;
+  height: 280px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin: 0em 10em;
-  padding: 3em;
+  margin-top: 2em;
+  width: 560px;
+  padding: 20px;
   flex-direction: column;
-  .input {
-    display: flex;
-    justify-content: space-between;
-    input {
-      width: 60%;
-    }
+  position: relative;
+  p {
+    margin: 0;
   }
+}
+
+.textField {
+  color: red;
+}
+
+.button {
+  text-align: center;
+  .but {
+    width: 150px;
+  }
+}
+
+.transfer {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.unit {
+  display: flex;
+  justify-content: center;
+  .un {
+    text-align: center;
+    padding: 0.5833em 0.833em;
+    min-width: 180px;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    color: #00b5ad;
+    border-color: #00b5ad;
+    border-radius: 0.28571429rem;
+  }
+}
+
+.delete {
+  position: absolute;
+  right: 5%;
+  top: 43%;
+  color: #dc143c;
+  cursor: pointer;
 }

@@ -7,7 +7,7 @@ import { getFromAcct } from '../helpers/helpers';
 export const SubstrateContext = createContext();
 
 export const SubstrateProvider = ({ children }) => {
-  let hoang = '5CLr3qYnSLNkfDzoZKXYt7DDaZrYWe8AMpN4bVnYEHxyBBBD';
+  let hoang = '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY';
   const [api, setApi] = useState(null);
   // Make the connection with the blockchain //
   const connection = async () => {
@@ -16,7 +16,6 @@ export const SubstrateProvider = ({ children }) => {
     setApi(con);
     loadAccounts(con);
   };
-
   /* Queries */
   // load all accounts, including those from extensions //
   const loadAccounts = async (api) => {
@@ -65,7 +64,7 @@ export const SubstrateProvider = ({ children }) => {
     unsubscribe();
     setStatus('Sending...');
     const fromAcct = await getFromAcct(api, keyring);
-    const data = [form.to, form.amount];
+    const data = [form.to, form.amount * 1000000000000];
     const txExecute = api.tx.balances.transfer(...data);
     const unsub = await txExecute
       .signAndSend(fromAcct, txResHandler)
@@ -90,12 +89,12 @@ export const SubstrateProvider = ({ children }) => {
     const fromAcct = await getFromAcct(api, keyring);
     const data = [objectId, assetId, hoang];
     let txExecute = api.tx.uniques.mint(...data);
-    console.log(txExecute);
     const unsub = await txExecute
       .signAndSend(fromAcct, txResHandler)
       .catch(txErrHandler);
     setUnsub(() => unsub);
   };
+
 
   const [accounts, setaccounts] = useState([]);
   const [balance, setbalance] = useState({});

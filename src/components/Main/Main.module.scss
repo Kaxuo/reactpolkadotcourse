@@ -1,22 +1,7 @@
-.accounts {
-  display: flex;
-  padding: 10px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  & > span {
-    display: flex;
-  }
-  .name {
-    width: 10vw;
-    justify-content: start;
-  }
-  .address {
-    width: 40vw;
-    justify-content: center;
-  }
-  .balance {
-    width: 10vw;
-    justify-content: center;
+.copy {
+  cursor: pointer;
+  &:active {
+    color: blueviolet;
   }
 }
 
@@ -32,5 +17,3 @@
     display: block !important;
   }
 }
-
-

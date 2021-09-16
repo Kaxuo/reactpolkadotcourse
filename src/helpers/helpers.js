@@ -1,7 +1,7 @@
 import { web3FromSource } from '@polkadot/extension-dapp';
 // Get Selected account , for the moment, the account is hardcoded //
 export const getFromAcct = async (api, keyring) => {
-  const acc = '5CLr3qYnSLNkfDzoZKXYt7DDaZrYWe8AMpN4bVnYEHxyBBBD';
+  const acc = '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY';
   const tempAcct = keyring.getPair(acc);
   const {
     address,
